@@ -1,4 +1,5 @@
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 import "../the-rewarder/TheRewarderPool.sol";
 import "../the-rewarder/FlashLoanerPool.sol";
